@@ -238,18 +238,21 @@ button:active{
 
 @media (max-width:500px){
     .image{
-        height:200px ;
+        height:180px ;
     }
     .searchbar{
-        width: 150px;
+        width: 180px;
         height: 30px;
     }
     .searchbar input{
         width: 100%;
     }
     .searchbar img{
-        width: 15px;
+        width: 14px;
         margin: 0 5px;
+    }
+    .description p{
+        font-size: 14px;
     }
 }
 
