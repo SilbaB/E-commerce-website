@@ -1,0 +1,259 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body{
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    min-height: 100vh;
+    background-color: rgb(252,252,252);
+}
+
+.navbar{
+    padding: 1% 3%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 1px 4px rgb(146 161 176 / 15%);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: rgb(252,252,252);
+}
+
+.navbar img{
+    width: 35px;
+}
+.nav-left{
+    display: flex;
+    align-items: center;
+    gap: 5%;
+}
+.nav-left p{
+    font-size: 18px;
+    font-weight: bold;
+    font-family: cursive;
+    text-decoration: overline;
+    text-decoration-color: orangered;
+}
+.nav-right{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav-links{
+    display: flex;
+    margin-right: 30px;
+    list-style-type: none;
+}
+.nav-links li a{
+    margin-right: 15px;
+    text-decoration: none;
+    color: grey;
+    font-weight: 450;
+    display: block;
+    position: relative;
+    transform: 0.5s;
+    cursor: pointer;
+}
+
+.nav-links li a::after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 3px;
+    top: 100%;
+    left: 0;
+    transition: transform 0.5s;
+    transform: scaleX(0);
+    transform-origin: right;
+    background-color: grey;
+}
+
+.nav-links li a:hover{
+    color: black;
+}
+.nav-links li a:hover::after{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.searchbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2px;
+    padding: 2%;
+    height: 35px;
+    width:250px;
+    border-radius: 50px;
+    border: 1px solid lightblue;
+    background-color: white;
+}
+.searchbar input{
+    height: 30px;
+    width: 200px;
+    outline: none;
+    border: 0;
+    border-right: 2px solid lightblue;
+}
+.searchbar img{
+    width: 20px;
+}
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 20px;
+    width: 20px;
+    margin-left: 20px;
+    /* border: 1px solid yellow; */
+    display: none;
+}
+.line{
+    height: 2px;
+    background-color: black;
+    width: 20px;
+}
+
+/* navlist */
+.nav-list{
+    border: 1px solid;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    z-index: 20;
+    height: 300px;
+    width: 80vw;
+    list-style: none;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2%;
+    padding: 1% 0;
+    color: grey;
+    display: none;
+}
+.nav-list a{
+    text-decoration: none;
+    list-style-type: none;
+    color: grey;
+    font-size: clamp(small,medium,large);
+}
+
+.nav-list a:hover{
+    font-weight: bold;
+}
+
+
+/* accordion */
+
+.accordion{
+    width: 800px;
+    background-color: white;
+    padding: 45px;
+    margin: 50px auto;
+}
+.accordion h1{
+    text-align: center;
+    text-decoration: underline;
+}
+.accordion .container{
+    position: relative;
+    margin: 10px 10px;
+}
+
+.accordion .label{
+    position: relative;
+    padding: 10px 0;
+    font-size: 20px;
+    color-scheme: black;
+    cursor: pointer;
+    font-weight: 400;
+}
+
+.accordion .label::before{
+    content: '+';
+    color: black;
+    position: absolute;
+    top: 50%;
+    right: -5px;
+    font-size: 24px;
+    transform: translateY(-50%);
+}
+
+.accordion .content{
+    position: relative;
+    background-color: white;
+    height: 0;
+    font-size: 17px;
+    text-align: justify;
+    /* width: 780px; */
+    overflow: hidden;
+    transition: 0.5s;
+    padding: 5px;
+    color: grey;
+}
+
+.accordion hr{
+    width: 100;
+    margin-left: 0;
+    height: 1px;
+    background-color: lightgrey;
+    border: 0;
+}
+
+.active .accordion ,.active .container,.active .content{
+    height: 60px;
+} 
+
+.active .accordion ,.active.container,.active .label::before{
+    content: '-';
+    font-size: 24px;
+}
+
+/* media queries */
+@media (max-width:900px){
+    .nav-links{
+        display: none;
+    }
+    .searchbar{
+        padding-left: 10px;
+    }
+    .searchbar input{
+        height: 25px;
+    }
+    .menu{
+        display: flex;
+    }
+    .description h3{
+        font-weight: 10px;
+    }
+}
+
+@media (max-width:500px){
+    .image{
+        height:180px ;
+    }
+    .searchbar{
+        width: 180px;
+        height: 30px;
+    }
+    .searchbar input{
+        width: 100%;
+    }
+    .searchbar img{
+        width: 14px;
+        margin: 0 5px;
+    }
+    .description p{
+        font-size: 14px;
+    }
+}
