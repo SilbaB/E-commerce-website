@@ -34,10 +34,12 @@ body{
     align-items: center;
     gap: 5%;
 }
-.nav-left p{
+.nav-left a{
     font-size: 18px;
     font-weight: bold;
     font-family: cursive;
+    color: black;
+    text-decoration: none;
     text-decoration: overline;
     text-decoration-color: orangered;
 }
@@ -115,11 +117,6 @@ body{
     margin-left: 20px;
     /* border: 1px solid yellow; */
     display: none;
-}
-.line{
-    height: 2px;
-    background-color: black;
-    width: 20px;
 }
 
 main{
@@ -257,23 +254,31 @@ button:active{
 }
 
 /* menu list */
-.nav-list{
-    border: 1px solid;
+.nav-list {
+    /* border: 1px solid; */
     position: absolute;
-    top: 50%;
-    right: 50%;
+    top: 48px;
+    right: 0;
+    left: 0;
     z-index: 20;
-    height: 300px;
-    width: 80vw;
+    height: 0;
+    width: 100vw;
     list-style: none;
     background-color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 2%;
-    padding: 1% 0;
+    padding: 5% 0;
     color: grey;
     display: none;
+    background-color: rgb(252,252,252);
+    border-bottom:1px solid lightgrey;
+    
+}
+
+.nav-list li{
+    margin-bottom: 10px;
 }
 .nav-list a{
     text-decoration: none;
@@ -284,9 +289,12 @@ button:active{
 
 .nav-list a:hover{
     font-weight: bold;
+    text-decoration: black;
 }
 
-.show-menu .nav-list{
-    display: flex;
-    transition: all 1s ease-in-out;
+.activeList{
+   display: flex;
+   height: auto;
+   min-height:200px ;  
 }
+
