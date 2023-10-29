@@ -53,13 +53,31 @@ body{
     display: flex;
     margin-right: 30px;
     list-style-type: none;
+    gap: 30px;
+}
+
+.nav-links i{
+    margin-right: 10px;
+    color: purple;
+}
+
+.nav-links li{
+    border: 1px solid white;
+    padding: 2px 5px;
+    border-radius: 5px;
+    transition: all 0.5s ease-in-out;
+}
+
+.nav-links li:hover{
+    border: 0;
+    background-color: whitesmoke;
+    border: 1px solid lightblue;
 }
 .nav-links li a{
-    margin-right: 15px;
     text-decoration: none;
     color: grey;
-    font-weight: 450;
-    display: block;
+    font-weight: 500;
+    display: inline-block;
     position: relative;
     transform: 0.5s;
     cursor: pointer;
@@ -84,6 +102,26 @@ body{
 .nav-links li a:hover::after{
     transform: scaleX(1);
     transform-origin: left;
+}
+.nav-links li .cart
+{
+    position: relative;
+}
+.nav-links li .cart span{
+    position: absolute;
+    top: -10px;
+    right: 0;
+    color: white;
+    background-color: red;
+    height: 15px;
+    width:15px;
+    font-size: 12px;
+    padding: 2%;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
 }
 
 .searchbar{
@@ -116,6 +154,7 @@ body{
     height: 20px;
     width: 20px;
     margin-left: 20px;
+    display: none;
 }
 .nav-list {
     /* border: 1px solid; */
@@ -140,8 +179,18 @@ body{
 }
 
 .nav-list li{
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    /* border: 1px solid; */
+    border-bottom: 1px solid purple;
+    padding: 5px 0;
+    width: 100px;
 }
+
+.nav-list li i{
+    margin-right: 15px;
+    color: purple;
+}
+
 .nav-list a{
     text-decoration: none;
     list-style-type: none;
@@ -167,7 +216,7 @@ body{
     width: 800px;
     background-color: white;
     padding: 45px;
-    margin: 50px auto;
+    margin: 20px auto;
 }
 .accordion h1{
     text-align: center;
@@ -201,12 +250,13 @@ body{
     position: relative;
     background-color: white;
     height: 0;
-    font-size: 17px;
+    font-size: 16px;
     text-align: justify;
     /* width: 780px; */
     overflow: hidden;
     transition: 0.5s;
     padding: 5px;
+    /* padding-left: 5px; */
     color: grey;
 }
 
@@ -255,6 +305,7 @@ body{
 }
 
 @media (max-width:500px){
+    
     .image{
         height:180px ;
     }
@@ -270,6 +321,21 @@ body{
         margin: 0 5px;
     }
     .description p{
+        font-size: 14px;
+    }
+    .accordion{
+        padding-left:5% ;
+        padding-right: 5%;
+    }
+    .accordion h1{
+        font-size: larger;
+    }
+    .accordion .label{
+        font-size: 16px;
+        font-weight: 500;
+    }
+    .accordion .content{
+        padding-right: 5%;
         font-size: 14px;
     }
 }

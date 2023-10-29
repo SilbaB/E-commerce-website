@@ -1,3 +1,7 @@
+:root{
+    --icon-color:purple ;
+}
+
 *
 {
     padding: 0;
@@ -52,13 +56,31 @@ body{
     display: flex;
     margin-right: 30px;
     list-style-type: none;
+    gap: 30px;
+}
+
+.nav-links i{
+    margin-right: 10px;
+    color: var(--icon-color);
+}
+
+.nav-links li{
+    border: 1px solid white;
+    padding: 2px 5px;
+    border-radius: 5px;
+    transition: all 0.5s ease-in-out;
+}
+
+.nav-links li:hover{
+    border: 0;
+    background-color: whitesmoke;
+    border: 1px solid lightblue;
 }
 .nav-links li a{
-    margin-right: 15px;
     text-decoration: none;
     color: grey;
-    font-weight: 450;
-    display: block;
+    font-weight: 500;
+    display: inline-block;
     position: relative;
     transform: 0.5s;
     cursor: pointer;
@@ -84,7 +106,26 @@ body{
     transform: scaleX(1);
     transform-origin: left;
 }
-
+.nav-links li .cart
+{
+    position: relative;
+}
+.nav-links li .cart span{
+    position: absolute;
+    top: -10px;
+    right: 0;
+    color: white;
+    background-color: red;
+    height: 15px;
+    width:15px;
+    font-size: 12px;
+    padding: 2%;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+}
 .searchbar{
     display: flex;
     align-items: center;
@@ -96,16 +137,20 @@ body{
     border-radius: 50px;
     border: 1px solid lightblue;
     background-color: white;
+    position: relative;
 }
 .searchbar input{
     height: 30px;
     width: 200px;
     outline: none;
     border: 0;
-    border-right: 2px solid lightblue;
 }
-.searchbar img{
-    width: 20px;
+
+
+.searchbar i{
+    text-align: center;
+    color: var(--icon-color);
+    font-weight: bolder;  
 }
 
 .menu{
@@ -117,6 +162,60 @@ body{
     margin-left: 20px;
     /* border: 1px solid yellow; */
     display: none;
+}
+/* menu list */
+.nav-list {
+    /* border: 1px solid; */
+    position: absolute;
+    top: 48px;
+    right: 0;
+    left: 0;
+    z-index: 20;
+    height: 0;
+    width: 100vw;
+    list-style: none;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2%;
+    padding: 5% 0;
+    color: grey;
+    display: none;
+    background-color: rgb(252,252,252);
+    border-bottom:1px solid lightgrey;
+    
+}
+
+.nav-list li{
+    margin-bottom: 20px;
+    /* border: 1px solid; */
+    border-bottom: 1px solid purple;
+    padding: 5px 0;
+    width: 100px;
+}
+
+.nav-list li i{
+    margin-right: 15px;
+    color: purple;
+}
+
+.nav-list a{
+    text-decoration: none;
+    list-style-type: none;
+    color: grey;
+    font-size: clamp(small,medium,large);
+}
+
+.nav-list a:hover{
+    font-weight: bold;
+    text-decoration: black;
+}
+
+.activeList{
+   display: flex;
+   height: auto;
+   min-height:200px ;  
 }
 
 main{
@@ -153,12 +252,16 @@ button:active{
 }
 .card-wrapper{
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
     gap: 30px;
     margin-top: 15px;
 }
 .card{
     position: relative;
+    box-shadow: 0 0 4px lightblue;
+    padding-bottom: 5px;
+    border-radius: 5px;
+    overflow: hidden;
 }
 .image{
     width: 100%;
@@ -168,19 +271,18 @@ button:active{
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 10px;
     overflow: hidden;
-    /* box-shadow: 0 0 2px 0 lightblue;  */
 }
 .image span{
     position: absolute;
     left: 1%;
     top:1%;
     background-color: whitesmoke;
-    padding: 1% 2%;
-    color: rgb(50, 50, 50);
-    font-weight: 400;
-    border-radius: 10px;
+    padding: 1px 2%;
+    color: brown;
+    font-weight: 500;
+    font-family: cursive;
+    border-radius: 5px;
     font-weight: small;
 }
 .image img{
@@ -193,21 +295,43 @@ button:active{
 
 .description h3{
     font-weight: 600;
+    /* font-size: large; */
     margin-top: 2px;
+    margin-left: 5px;
+}
+
+.description h3 span:first-child{
+    font-size: 14px;
+    font-weight: 500;
+    margin-left: 3px;
+    display: none;
+}
+
+.description h3 span button{
+    float: right;
+    margin-right: 5px;
+    border:1px solid red;
+    background-color: red;
+    color: white;
+    font-weight: 500;
+    padding: 2px 4px;
 }
 
 .description p{
-   margin: 5px 0;
-   color: rgb(100, 100, 100);
-   font-weight: 350;
+   margin: 5px ;
+   color: rgb(63, 60, 60);
+   font-weight: 400;
+   font-size: 14px;
 }
 .price{
     color: green;
+    font-weight: bold;
 }
 .price span{
     color: grey;
     font-size:17px;
     margin-left: 10px;
+    font-weight: 400;
     text-decoration:line-through;
 }
 .dark-version {
@@ -253,48 +377,4 @@ button:active{
     }
 }
 
-/* menu list */
-.nav-list {
-    /* border: 1px solid; */
-    position: absolute;
-    top: 48px;
-    right: 0;
-    left: 0;
-    z-index: 20;
-    height: 0;
-    width: 100vw;
-    list-style: none;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2%;
-    padding: 5% 0;
-    color: grey;
-    display: none;
-    background-color: rgb(252,252,252);
-    border-bottom:1px solid lightgrey;
-    
-}
-
-.nav-list li{
-    margin-bottom: 10px;
-}
-.nav-list a{
-    text-decoration: none;
-    list-style-type: none;
-    color: grey;
-    font-size: clamp(small,medium,large);
-}
-
-.nav-list a:hover{
-    font-weight: bold;
-    text-decoration: black;
-}
-
-.activeList{
-   display: flex;
-   height: auto;
-   min-height:200px ;  
-}
 
