@@ -21,21 +21,26 @@
         </div>
         <div class="nav-right">
             <ul class="nav-links">
-                <li><a href="/index.html">Store</a></li>
-                <li><a href="/html/about.html">About</a></li>
-                <li><a href="#">Support</a></li>
-                <li><a href="/html/contact.html">Contact</a></li>
+                <li><i class="fas fa-store"></i><a href="/index.html">Store</a></li>
+                <li><i class="fas fas fa-users"></i><a href="/html/about.html">About</a></li>
+                <li><i class="fas fas fa-user-cog"></i><a href="#">Support</a></li>
+                <li><i class="fas fas fa-phone"></i><a href="/html/contact.html">Contact</a></li>
+                <li><a href="#" class="cart"><i class="fas fas fa-shopping-cart"></i><span>3</span></a></li>
             </ul>
+            
             <ul class="nav-list">
-                <li><a href="/index.html">Store</a></li>
-                <li><a href="/html/about.html">About</a></li>
-                <li><a href="#">Support</a></li>
-                <li><a href="/html/contact.html">Contact</a></li>
+                <li><i class="fas fa-store"></i><a href="/index.html">Store</a></li>
+                <li><i class="fas fas fa-users"></i><a href="/html/about.html">About</a></li>
+                <li><i class="fas fas fa-user-cog"></i><a href="#">Support</a></li>
+                <li><i class="fas fas fa-phone"></i><a href="/html/contact.html">Contact</a></li>
+                <li><i class="fas fas fa-shopping-cart"></i><a href="#">Cart</a></li>
             </ul>
+            
             <fieldset class="searchbar">
                 <input type="search" placeholder="Search" name="search input">
                 <img src="/istock/magnifying-glass-solid.jpg" alt="search">
             </fieldset>
+            
             <span class="menu">
                 <i class="fa fa-bars menuBar"></i>
             </span>
@@ -51,18 +56,61 @@
                 </video>
             </div>
 
-            <h2>Contact Us</h2>
-            <p><span>Address : </span>30-465 Murko Stores , Elgeyo</p>
-            <p><span>Phone Number : </span>+254&dash;722&dash;356&dash;723</p>
-            <p><span>Location : </span>Elgeyo-Marakwet , Kenya</p>
-            <p><span>Email Address : </span>BCollections@gmail.com</p>
+            <div class="contact-details">
+                <h2>Contact Us</h2>
+                <section class="contact-sec location">
+                    <i class="fas fas fa-map-marker-alt"></i>
+                    <div class="more">
+                        <p><span>Location : </span>Elgeyo-Marakwet , Kenya</p>  
+                    </div>                   
+                </section> 
+                
+                <section class="contact-sec address">
+                    <i class="fas fas fas fa-store-alt"></i>
+                    <div class="more">
+                        <p><span>Address : </span>30-465 Murko Stores </p>
+                    </div>                 
+                </section>
+                
+                <section class="contact-sec phone">
+                    <i class="fas fa-phone"></i>
+                    <div class="more">
+                        <p><span>Phone Number : </span>+254&dash;722&dash;356&dash;723</p> 
+                    </div>                 
+                </section>
+               
+                <section class="contact-sec email">
+                    <i class="fas fas fa-envelope"></i>
+                    <div class="more">
+                        <p><span>Email Address : </span>silbacollections@gmail.com</p>
+                    </div>                   
+                </section>
+                
+                <!-- <section class="socials">
+                    <a href="#"><i class="fas fab fa-facebook"></i></a>
+                    <a href="#"><i class="fas fa-instagram-square"></i></a>
+                    <a href="#"><i class="fas fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fas fab fa-whatsapp"></i></a>
+                </section> -->
+            </div>           
         </div>   
 
         <form>
             <h3>Get In Touch</h3>
+            <span>
+            <i class="fas fa-user"></i>
             <input type="text" name="first name" placeholder="Enter your name" autofocus required>
+            </span>
+            
+            <span>
+            <i class="fas fa-envelope"></i>
             <input type="email" name="Email Address" placeholder="Email Address" required>
+            </span>
+            
+            <span>
+             <i class="fas fas fa-pencil-alt"></i>   
             <input type="text" placeholder="Subject" required>
+            </span>
             <textarea name="Textbox message" id="textarea" cols="60" rows="10" placeholder="Type your message here ..." required></textarea>
             <button type="submit">SUBMIT</button>
         </form>   
