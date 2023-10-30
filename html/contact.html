@@ -38,7 +38,7 @@
             
             <fieldset class="searchbar">
                 <input type="search" placeholder="Search" name="search input">
-                <img src="/istock/magnifying-glass-solid.jpg" alt="search">
+                <i class="fas fa-search"></i>
             </fieldset>
             
             <span class="menu">
@@ -95,25 +95,28 @@
             </div>           
         </div>   
 
-        <form>
+        <form action="https://formspree.io/f/xnqkwele" method="POST">
             <h3>Get In Touch</h3>
             <span>
             <i class="fas fa-user"></i>
-            <input type="text" name="first name" placeholder="Enter your name" autofocus required>
+            <input type="text" name="Sender's name" placeholder="Enter your name" autofocus required>
             </span>
             
             <span>
             <i class="fas fa-envelope"></i>
-            <input type="email" name="Email Address" placeholder="Email Address" required>
+            <input type="email" name="Sender's email Address" placeholder="Email Address" required>
             </span>
             
             <span>
              <i class="fas fas fa-pencil-alt"></i>   
-            <input type="text" placeholder="Subject" required>
+            <input type="text" placeholder="Subject" name="Subject" required>
             </span>
-            <textarea name="Textbox message" id="textarea" cols="60" rows="10" placeholder="Type your message here ..." required></textarea>
+            <textarea name="Textbox message" id="textarea" cols="60" rows="10" placeholder="Type your message here ..." required name="Sender's message"></textarea>
             <button type="submit">SUBMIT</button>
         </form>   
     </div>
+    
+    
+    
 </body>
 </html>
