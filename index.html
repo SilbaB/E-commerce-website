@@ -24,7 +24,7 @@
                 <li><i class="fas fas fa-users"></i><a href="/html/about.html">About</a></li>
                 <li><i class="fas fas fa-user-cog"></i><a href="#">Support</a></li>
                 <li><i class="fas fas fa-phone"></i><a href="/html/contact.html">Contact</a></li>
-                <li><a href="#" class="cart"><i class="fas fas fa-shopping-cart"></i><span>3</span></a></li>
+                <li><a href="#" class="cart"><i class="fas fas fa-shopping-cart"></i><span class="count">`${cart}`</span></a></li>
             </ul>
             
             <ul class="nav-list">
@@ -53,7 +53,7 @@
 
     <div class="buttons">
         <button type="button" class="btn btn1">All</button>
-        <button type="button" class="btn btn2">Shoes</button>
+        <button type="button" class="btn btn2">FootWear</button>
         <button type="button" class="btn btn3">Technology</button>
         <button type="button" class="btn btn4">Accessories</button>
 
@@ -70,7 +70,7 @@
                 <h3>Red Nike Sneaker</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia.</p>
                 <h3 class="price">$119.99 USD <span>$130</span>
-                    <span><button>Add To Cart</button></span>
+                    <span><button id="add-to-cart">Add To Cart</button></span>
                 </h3>
             </div>
         </div>
@@ -270,5 +270,40 @@
         </div>
     </main>
    
+    
+    <script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
+    <script>
+      /* paste this line in verbatim */
+      window.formbutton=window.formbutton||function(){(formbutton.q=formbutton.q||[]).push(arguments)};
+      /* customize formbutton below*/     
+      formbutton("create", {
+        action: "https://formspree.io/f/xnqkwele",
+        title: "How can we help?",
+        fields: [
+          { 
+            type: "email", 
+            label: "Email:", 
+            name: "email",
+            required: true,
+            placeholder: "Your email Address "
+          },
+          {
+            type: "textarea",
+            label: "Message:",
+            name: "message",
+            placeholder: "What's on your mind?",
+          },
+          { type: "submit" }      
+        ],
+        styles: {
+          title: {
+            backgroundColor: "purple"
+          },
+          button: {
+            backgroundColor: "purple",
+          }
+        }
+      });
+    </script>
 </body>
 </html>
