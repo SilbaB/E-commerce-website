@@ -250,6 +250,7 @@ h1 {
   border: 1px solid black;
 }
 
+
 button:active {
   transform: translatey(2px);
 }
@@ -291,7 +292,8 @@ button:active {
 }
 .image:hover img {
   transform: scale(2);
-}
+  }
+
 
 .description h3 {
   font-weight: 600;
@@ -335,6 +337,36 @@ button:active {
   margin-left: 10px;
   font-weight: 400;
   text-decoration: line-through;
+  }
+  
+.description h3 span button{
+    float: right;
+    margin-right: 5px;
+    border:1px solid red;
+    background-color: red;
+    color: white;
+    font-weight: 500;
+    padding: 4px 8px;
+    border-radius: 3px;
+}
+
+.description p{
+   padding-left: 5px;
+   margin-bottom: 1rem;
+   color: rgb(100, 100, 100);
+   font-size: 14px;
+}
+.price{
+    color: green;
+    font-weight: bold;
+    font-size: 17px;
+}
+.price span{
+    color: grey;
+    font-size:17px;
+    margin-left: 10px;
+    font-weight: 400;
+    text-decoration:line-through;
 }
 .dark-version {
   background-color: black;
